@@ -1,0 +1,12 @@
+{
+  "foundation": "V37",
+  "implementation": "Local Search UI with honest pending feature status",
+  "tests": {
+    "LocalSearchTest": "PASS 6 assertions",
+    "Android build": "NOT RUN \u2014 missing Android SDK and Gradle",
+    "Android runtime": "NOT VERIFIED",
+    "full regression": "NOT RERUN"
+  },
+  "preserved_source": "Copied from V36",
+  "artifact_kind": "Android source archive, not APK"
+}

@@ -1,0 +1,11 @@
+{
+  "foundation": "V18",
+  "source_created": true,
+  "v18_shader_source_contract": "PASS_JVM",
+  "v17_density_regression": "PASS_JVM",
+  "android_apk": "NOT_BUILT",
+  "gpu_shader_execution": "NOT_VERIFIED",
+  "full_h3": "NOT_IMPLEMENTED",
+  "scene_depth_occlusion": "NOT_IMPLEMENTED",
+  "master_plan_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49"
+}

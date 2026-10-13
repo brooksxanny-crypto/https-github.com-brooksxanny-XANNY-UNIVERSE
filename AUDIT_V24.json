@@ -1,0 +1,9 @@
+{
+  "foundation": "V24",
+  "feature": "Android build-environment preflight script",
+  "preflight_executed": true,
+  "APK_compiled": false,
+  "GPU_tested": false,
+  "full_regressions": "not run",
+  "master_plan_modified": false
+}

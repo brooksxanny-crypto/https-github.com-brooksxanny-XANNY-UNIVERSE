@@ -1,0 +1,65 @@
+name: Android debug build and evidence V31
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Install Android 35 SDK and build tools
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Verify project source before compile
+        run: python3 tools/check_android_source.py | tee STATIC_SOURCE_REPORT.json
+      - name: Install Kotlin compiler for pure-JVM regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL -o kotlin-compiler.zip https://github.com/JetBrains/kotlin/releases/download/v2.0.21/kotlin-compiler-2.0.21.zip
+          unzip -q kotlin-compiler.zip -d "$RUNNER_TEMP/kotlin"
+          echo "$RUNNER_TEMP/kotlin/kotlinc/bin" >> "$GITHUB_PATH"
+      - name: Run JVM regressions and retain machine-readable report
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/run_jvm_regressions.py --output JVM_REGRESSION_REPORT.json 2>&1 | tee JVM_REGRESSION.log
+      - name: Attempt debug APK compilation (retain full log)
+        shell: bash
+        run: |
+          set -o pipefail
+          gradle --no-daemon --stacktrace :app:assembleDebug 2>&1 | tee ANDROID_BUILD.log
+      - name: Verify output APK and record fingerprint
+        run: python3 tools/verify_debug_apk.py app/build/outputs/apk/debug/app-debug.apk APK_BUILD_REPORT.json
+      - name: Upload APK only if produced
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xanny-universe-v31-debug-apk-unverified-on-device
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Archive diagnostics, including failed builds
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xanny-universe-v31-build-diagnostics
+          path: |
+            JVM_REGRESSION.log
+            JVM_REGRESSION_REPORT.json
+            ANDROID_BUILD.log
+            STATIC_SOURCE_REPORT.json
+            APK_BUILD_REPORT.json
+          if-no-files-found: warn
+      - name: Record environment preflight
+        if: always()
+        run: python3 tools/preflight.py

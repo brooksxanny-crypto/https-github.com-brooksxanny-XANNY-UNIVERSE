@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Environment-only checks; never claims an APK has been compiled."""
+import json,os,shutil,subprocess
+from pathlib import Path
+root=Path(__file__).resolve().parents[1]
+sdk_candidates=[os.environ.get('ANDROID_HOME'),os.environ.get('ANDROID_SDK_ROOT')]
+sdk=next((str(Path(s)) for s in sdk_candidates if s and (Path(s)/'platforms/android-35/android.jar').is_file()),None)
+wrapper=(root/'gradlew').is_file() and (root/'gradle/wrapper/gradle-wrapper.jar').is_file()
+gradle=shutil.which('gradle')
+result={
+ 'java_available':bool(shutil.which('java')),
+ 'kotlinc_available':bool(shutil.which('kotlinc')),
+ 'gradle_cli_available':bool(gradle),
+ 'gradle_wrapper_complete':wrapper,
+ 'android_35_platform_installed':bool(sdk),
+ 'manifest_present':(root/'app/src/main/AndroidManifest.xml').is_file(),
+ 'android_build_executed':False,
+ 'android_gpu_verified':False,
+ 'build_ready_local':bool(shutil.which('java') and (gradle or wrapper) and sdk)
+}
+print(json.dumps(result,indent=2))
