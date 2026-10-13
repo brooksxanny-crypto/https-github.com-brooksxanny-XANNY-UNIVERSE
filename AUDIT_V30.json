@@ -1,0 +1,16 @@
+{
+  "foundation": "V30",
+  "source_origin": "V29 ZIP",
+  "changes": [
+    "CI source checks run before build",
+    "capture Gradle stacktrace build log",
+    "archive diagnostic files even on failure",
+    "APK verification and upload conditional on success"
+  ],
+  "local_static_source_checks": "6/6 passed",
+  "workflow_yaml": "parsed, 11 steps",
+  "android_apk_compilation": "not performed (Gradle/Android SDK unavailable)",
+  "device_and_gpu_test": "not performed",
+  "jvm_full_regression": "not run",
+  "status": "source only; cannot claim installable APK"
+}

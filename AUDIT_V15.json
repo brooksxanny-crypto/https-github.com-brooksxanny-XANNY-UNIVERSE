@@ -1,0 +1,24 @@
+{
+  "phase": "Foundation V15",
+  "source_implemented": [
+    "OpenGL ES framebuffer scene color capture",
+    "depth renderbuffer attachment",
+    "two scene draw passes",
+    "viewport restoration"
+  ],
+  "not_implemented": [
+    "independent chrome reflections",
+    "reflection projection and sampling",
+    "H3 volumetric simulation",
+    "approved character assets"
+  ],
+  "checks": {
+    "capture_file": "PASS",
+    "capture_call": "PASS",
+    "present_pass": "PASS",
+    "source_reflection_not_claimed": "PASS",
+    "zip_integrity": "PASS"
+  },
+  "apk": "NOT_BUILT",
+  "gpu": "NOT_VERIFIED"
+}

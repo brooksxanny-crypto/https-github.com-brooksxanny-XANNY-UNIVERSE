@@ -1,0 +1,23 @@
+{
+  "foundation": "V36",
+  "date": "2026-10-13",
+  "change": "OpenGL preview Compose disposal and EGL context preservation request",
+  "checks": {
+    "lifecycle_source_contract": {
+      "passed": true,
+      "output": "{\n  \"egl_context_preservation_requested\": true,\n  \"surface_reference_cleared_on_dispose\": true,\n  \"android_view_on_release\": true,\n  \"lifecycle_observer_removed\": true,\n  \"no_fifth_navigation_tab\": true\n}\n"
+    },
+    "android_source_checks": {
+      "passed": true,
+      "output": "{\n  \"static_checks\": {\n    \"manifest_parses\": true,\n    \"android_namespace_present\": true,\n    \"android_35_configured\": true,\n    \"required_assets_present\": true,\n    \"android_source_present\": true,\n    \"reflection_depth_source_present\": true\n  },\n  \"all_passed\": true,\n  \"android_compiled\": false\n}\n"
+    },
+    "python_syntax": {
+      "passed": true,
+      "output": ""
+    }
+  },
+  "android_apk_compiled": false,
+  "android_device_tested": false,
+  "full_jvm_suite_rerun": false,
+  "note": "Static checks only; Android view lifecycle and GPU behavior still require runtime validation."
+}

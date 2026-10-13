@@ -1,0 +1,27 @@
+{
+  "foundation": "V21",
+  "source": "V20 copied and extended",
+  "verified_tests": [
+    {
+      "name": "V21 analytic sphere occlusion",
+      "result": "passed"
+    },
+    {
+      "name": "V18 raymarch shader contract",
+      "result": "passed"
+    }
+  ],
+  "not_verified": [
+    "full regression",
+    "Android APK",
+    "GLSL runtime",
+    "volumetric quality",
+    "all-object shadows",
+    "production H3"
+  ],
+  "known_limitations": [
+    "single static illustrative sphere",
+    "ray test does not represent arbitrary mesh shapes",
+    "no device profiling"
+  ]
+}

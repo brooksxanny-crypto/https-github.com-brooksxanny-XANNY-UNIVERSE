@@ -1,0 +1,21 @@
+{
+  "foundation": "V22",
+  "implemented": [
+    "Scene-derived bounded dynamic spherical shadow occluders",
+    "3-sphere GLSL occlusion uniforms",
+    "JVM test of motion and scene mapping"
+  ],
+  "verified": {
+    "targeted_kotlin_compile": "pass",
+    "SceneShadowSyncTest": "pass"
+  },
+  "not_verified": [
+    "Android build",
+    "GPU shader compile and execution",
+    "full regression suite",
+    "real geometry shadowing",
+    "frame-exact synchronized snapshot",
+    "production H3"
+  ],
+  "master_plan_modified": false
+}

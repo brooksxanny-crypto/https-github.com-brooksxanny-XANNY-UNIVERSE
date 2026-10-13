@@ -1,0 +1,8 @@
+{
+  "foundation": "V23",
+  "test": "PreviewFrameSnapshotTest passed with Kotlin JVM",
+  "further_regressions": "timed out; not verified",
+  "Android_build": "not performed",
+  "GPU": "not verified",
+  "master_plan": "unchanged"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "V8",
+  "source_created": true,
+  "v7_regression_jvm_pass": 9,
+  "v8_new_jvm_pass": 2,
+  "android_compilation": "NOT_RUN",
+  "gpu_render": "NOT_VERIFIED",
+  "apk": "NOT_BUILT",
+  "master_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49",
+  "master_modified": false,
+  "glTF_support": "bounded GLB indexed triangles with normals and material factors; no PBR shader or skinning",
+  "approved_H3": "NOT_IMPLEMENTED",
+  "approved_reflective_chrome": "NOT_IMPLEMENTED",
+  "approved_rigged_characters": "NOT_IMPLEMENTED"
+}

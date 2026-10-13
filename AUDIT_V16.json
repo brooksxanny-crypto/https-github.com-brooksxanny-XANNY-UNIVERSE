@@ -1,0 +1,22 @@
+{
+  "phase": "V16",
+  "implementation": "planar mirrored-camera color capture and projected-texture plane in OpenGL source",
+  "new_math_test": {
+    "compile_exit": 0,
+    "run_exit": 0,
+    "output": "PASS planar reflection math\n"
+  },
+  "android_build": "NOT_RUN",
+  "gpu_shader_runtime": "UNVERIFIED",
+  "independent_chrome": "NOT_IMPLEMENTED",
+  "volumetric_H3": "NOT_IMPLEMENTED",
+  "master_plan_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49",
+  "master_plan_unchanged": true,
+  "known_limitations": [
+    "fixed horizontal plane only",
+    "no clip-plane rejection",
+    "not scene-independent per-object chrome",
+    "no render-device test",
+    "existing shader/runtime integration unverified"
+  ]
+}

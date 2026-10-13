@@ -1,0 +1,30 @@
+{
+  "project": "Android Foundation V2",
+  "source_baseline": "Foundation V1",
+  "original_v1_zip_sha256": "0e08e7d25c4bf726cb6688aac37513f95df8ff03f4a675cf2ea6c0f47f7bdfec",
+  "master_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49",
+  "tests": [
+    {
+      "test": "NavigationPolicyTest.kt",
+      "compile_exit": 0,
+      "run_exit": 0,
+      "output": "PASS: protected four routes, labels, uniqueness, and Together physical-entry authorization policy\n"
+    },
+    {
+      "test": "AuthorizedSceneGateTest.kt",
+      "compile_exit": 0,
+      "run_exit": 0,
+      "output": "PASS: denied, mismatched principal, unknown target, no executor = never claim committed\n"
+    }
+  ],
+  "build_status": "NOT BUILT: SDK and Gradle unavailable",
+  "renderer_status": "GL ES source written, GPU/device unverified",
+  "not_implemented": [
+    "H3 volumetrics",
+    "independent reflective chrome",
+    "approved skeletal Xanny/Tokyo",
+    "real Together communications",
+    "authorized music engines",
+    "cinema and reels"
+  ]
+}

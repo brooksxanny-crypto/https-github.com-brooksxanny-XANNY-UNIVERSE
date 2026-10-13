@@ -1,0 +1,43 @@
+{
+  "version": "V11",
+  "implemented": [
+    "GLB animation accessor parsing for LINEAR/STEP TRS channels",
+    "quaternion SLERP for rotation, evaluated node poses",
+    "hierarchical world matrix calculation for skin joint palettes",
+    "strict time and buffer validations"
+  ],
+  "tested_suites_passed": [
+    "AssetManifestTest.kt",
+    "AuthorizedSceneGateTest.kt",
+    "CpuSkinningTest.kt",
+    "GlbReaderTest.kt",
+    "GltfAnimationDecodeTest.kt",
+    "GltfAnimationTest.kt",
+    "GltfExpandedMeshTest.kt",
+    "GltfMeshDecoderTest.kt"
+  ],
+  "passed_count": 8,
+  "remaining_unverified": [
+    "GltfSkinImportTest.kt",
+    "NavigationPolicyTest.kt",
+    "PreviewSceneTest.kt",
+    "QuaternionTransformTest.kt",
+    "SceneGraphTest.kt",
+    "SceneGraphV5Test.kt",
+    "SkeletonDefinitionTest.kt"
+  ],
+  "android_compile": "NOT_RUN_NO_ANDROID_SDK",
+  "gpu_render": "NOT_RUN",
+  "skeletal_animation_visible_on_device": "NOT_IMPLEMENTED",
+  "master_plan_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49",
+  "master_plan_unchanged": true,
+  "previous_versions_preserved": true,
+  "known_limitations": [
+    "No CUBICSPLINE",
+    "No morph targets",
+    "No actual rigged character assets",
+    "No animation connected to OpenGL draw loop",
+    "No full glTF runtime",
+    "No chrome/H3"
+  ]
+}

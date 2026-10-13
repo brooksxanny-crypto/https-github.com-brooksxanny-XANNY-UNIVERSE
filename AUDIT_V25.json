@@ -1,0 +1,12 @@
+{
+  "foundation": "V25",
+  "source": "V24",
+  "changes": [
+    "fixed test helper name collision",
+    "added shared compile JVM suite runner"
+  ],
+  "jvm_suite": "attempted; timed out; pass count unverified",
+  "android_build": "not run",
+  "gpu": "not tested",
+  "status": "source created, verification incomplete"
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "Foundation V13",
+  "kotlin_common_compilation": "PASS",
+  "jvm_tests": {
+    "AnimatedMeshPreviewTest": "PASS",
+    "AssetManifestTest": "PASS",
+    "AuthorizedSceneGateTest": "PASS",
+    "CpuSkinningTest": "PASS",
+    "GlbReaderTest": "PASS",
+    "GltfAnimationDecodeTest": "PASS",
+    "GltfAnimationTest": "NOT_COMPLETED",
+    "GltfExpandedMeshTest": "NOT_COMPLETED",
+    "GltfMeshDecoderTest": "NOT_COMPLETED",
+    "GltfSkinImportTest": "NOT_COMPLETED",
+    "GpuSkinningContractTest": "PASS",
+    "NavigationPolicyTest": "NOT_COMPLETED",
+    "PreviewSceneTest": "NOT_COMPLETED",
+    "QuaternionTransformTest": "NOT_COMPLETED",
+    "SceneGraphTest": "NOT_COMPLETED",
+    "SceneGraphV5Test": "NOT_COMPLETED",
+    "SkeletonDefinitionTest": "NOT_COMPLETED"
+  },
+  "android_build": "NOT_RUN",
+  "gpu_shader_compile": "NOT_VERIFIED",
+  "gpu_device_render": "NOT_VERIFIED",
+  "real_chrome": "NOT_IMPLEMENTED",
+  "H3_volumetrics": "NOT_IMPLEMENTED",
+  "character_assets": "NOT_AVAILABLE",
+  "master_plan_sha256": "5ac883dd3d8767b60f6fef52d13012b2a5126418ecd9f539bc8938152d77ae49",
+  "master_plan_modified": false
+}
